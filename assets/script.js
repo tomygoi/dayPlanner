@@ -7,7 +7,7 @@
     $(".saveBtn").on("click", function() {
       var event = $(this).siblings(".description").val();
       var time = $(this).parent().attr("id");
-      localStorage.setItem(event, time);
+      localStorage.setItem(time, event);
 
     })
 
@@ -40,7 +40,8 @@
 
     function storage() {
       for (let i = 9; i <= 17; i++) {
-        $('[id="hour-${i}"] .description').val(localStorage.getItem('hour-${i}'));
+        $(`[id="hour-${i}"] .description`).val(localStorage.getItem(`hour-${i}`));
+        console.log(`hour-${i}`);
       }
     }
 
