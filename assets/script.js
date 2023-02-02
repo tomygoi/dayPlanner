@@ -40,7 +40,7 @@
 
     function storage() {
       for (let i = 9; i <= 17; i++) {
-        $('#hour-${i} .description').val(localStorage.getItem('hour-${i}'));
+        $('[id="hour-${i}"] .description').val(localStorage.getItem('hour-${i}'));
       }
     }
 
