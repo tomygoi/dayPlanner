@@ -12,8 +12,8 @@
     })
 
     function styleBlock() {
-      var currentTime = dayjs.hour();
-
+      var currentTime = dayjs().hour();
+          
       $(".time-block").each(function () {
         var timeBlock = parseInt($(this).attr("id").split("hour-")[1]);
 
@@ -39,8 +39,8 @@
     }
 
     function storage() {
-      for (var i = 8; i <= 17; i++) {
-        $('#hour${hour} .description').val(localStorage.getItem('hour-${hour}'));
+      for (let i = 9; i <= 17; i++) {
+        $('#hour-${i} .description').val(localStorage.getItem('hour-${i}'));
       }
     }
 
